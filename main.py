@@ -102,3 +102,9 @@ for i in range (int(numvectors)):
                             validGamma=0
                         if (float(gamma)<=180) and (float(gamma)>=0):
                             validGamma=1
+            opAngles=(math.cos(math.radians(float(alpha))))**2+(math.cos(math.radians(float(beta))))**2+(math.cos(math.radians(float(gamma))))**2
+            if (opAngles<=1.10)and (opAngles>=0.9):
+                correctAngles=True
+            else:
+                print("\033[1;31m"+"**"+"\033[4;30m"+"La suma de los cosenos directores al cuadrado no se encuentra entre 0.9 y 1.1"+"\033[0;m")
+                correctAngles=False
