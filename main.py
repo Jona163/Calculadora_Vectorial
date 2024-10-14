@@ -86,3 +86,11 @@ for i in range (int(numvectors)):
                             validBeta=0
                         if (float(beta)<=180) and (float(beta)>=0):
                             validBeta=1
+            validGamma = 0
+            while validGamma == 0:
+                gamma = input("\033[1;32m"+"Ingrese el ángulo gamma (ángulo con el eje Z) separando los enteros de los decimales con un punto (.): "+"\033[0;m")
+                if gamma.count(".")!=1:
+                    print("\033[1;31m"+"**"+"\033[4;30m"+"Los enteros y los decimales deben estar separados por un punto."+"\033[0;m")
+                    validGamma=0
+                if gamma.count(".")==1:
+                    if (not(gamma.split(".")[0].isdigit())) or (not(gamma.split(".")[1].isdigit())):
