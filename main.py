@@ -80,3 +80,9 @@ for i in range (int(numvectors)):
                     if (not(beta.split(".")[0].isdigit())) or (not(beta.split(".")[1].isdigit())):
                         print("\033[1;31m"+"**"+"\033[4;30m"+"Los elementos antes y después del punto deben ser números."+"\033[0;m")
                         validBeta = 0
+                    if (beta.split(".")[0].isdigit()) and (beta.split(".")[1].isdigit()):
+                        if (float(beta)<0) or (float(beta)>180):
+                            print("\033[1;31m"+"**"+"\033[4;30m"+"Lo sentimos, lo que has ingresado no es un ángulo válido, debe estar entre 0 y 180 grados, inténtalo de nuevo."+"\033[0;m")
+                            validBeta=0
+                        if (float(beta)<=180) and (float(beta)>=0):
+                            validBeta=1
