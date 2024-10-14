@@ -108,3 +108,7 @@ for i in range (int(numvectors)):
             else:
                 print("\033[1;31m"+"**"+"\033[4;30m"+"La suma de los cosenos directores al cuadrado no se encuentra entre 0.9 y 1.1"+"\033[0;m")
                 correctAngles=False
+
+        infoVectori.append(float(alpha))
+        infoVectori.append(float(beta))
+        infoVectori.append(float(gamma))
