@@ -159,3 +159,14 @@ for i in range (int(numvectors)):
                 if compFy.count(".") != 1:
                     print("\033[1;31m"+"**"+"\033[4;30m"+"Los enteros y los decimales deben estar separados por un punto."+"\033[0;m")
                     validFy = 0
+                if compFy.count(".") == 1:
+                    if (not (compFy.split(".")[0].isdigit())) or (not (compFy.split(".")[1].isdigit())):
+                        print("\033[1;31m"+"**"+"\033[4;30m"+"Los elementos antes y después del punto deben ser números."+"\033[0;m")
+                        validFy = 0
+                    if (compFy.split(".")[0].isdigit()) and (compFy.split(".")[1].isdigit()):
+                        validFy = 1
+            if compFy.startswith("-"):
+                possFy=compFy[1:]
+                if possFy.count(".") != 1:
+                    print("\033[1;31m"+"**"+"\033[4;30m"+"Los enteros y los decimales deben estar separados por un punto."+"\033[0;m")
+                    validFy = 0
