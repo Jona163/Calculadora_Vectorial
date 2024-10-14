@@ -15,3 +15,15 @@ numvectors=input("\033[1;32m"+"n= "+"\033[0;m")
 while not(numvectors.isdigit()) or not(int(numvectors)>0):
     print("\033[1;31m"+"**"+"\033[4;30m"+ "Lo sentimos, lo que has ingresado no es un número valido, vuelve a intentarlo"+"\033[0;m")
     numvectors= input("\033[1;32m"+"n= "+"\033[0;m")
+
+#Segunda parte: Definir la información que me dará de cada vector y almacenarlo.
+vectoresinfo=[]
+opValInfo=["a","b","c","1","2"]
+for i in range (int(numvectors)):
+    infoVectori=[i+1]
+    print("\nIngresaremos la información de vector número: ",i+1,"\n¿Qué datos nos proporcionarás?\033[1;34m Opciones de ingreso de datos-MENU 1:\na.- Magnitud y Cosenos Directores.\nb.- Vector Cartesiano.\nc.- Magnitud y Dirección a partir de dos puntos.\n1.-Menu 2-Graficacion 2D\n2.-Menu 2-Graficacion 3D")
+    opInfo=input("\033[1;32m"+"La opción de ingreso de datos escogida es: "+"\033[0;m").lower()
+    while opInfo not in opValInfo:
+        print("\033[1;31m"+"**"+"\033[4;30m"+"Lo sentimos, únicamente puedes escoger entre la opción \"a\",\"b\" o \"c\"."+"\033[0;m")
+        opInfo = input("\033[1;32m"+"La opción de ingreso de datos escogida para el vector es: "+"\033[0;m").lower()
+    print(" ")
