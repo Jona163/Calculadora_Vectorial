@@ -27,6 +27,16 @@ for i in range (int(numvectors)):
         print("\033[1;31m"+"**"+"\033[4;30m"+"Lo sentimos, únicamente puedes escoger entre la opción \"a\",\"b\" o \"c\"."+"\033[0;m")
         opInfo = input("\033[1;32m"+"La opción de ingreso de datos escogida para el vector es: "+"\033[0;m").lower()
     print(" ")
+    
  if opInfo=="a":
         print("Usted ha seleccionado la opción \"a.- Magnitud y Cosenos Directores\"")
         infoVectori.append("a")
+        #Recordando que una magnitud es positiva y que los ángulos directores indican su dirección.
+        print("Ingresaremos la magnitud del vector.")
+        magnitudVi=0
+        validMag=0
+        while validMag==0:
+            magnitudVi = input("\033[1;32m"+"Ingrese la magnitud del vector separando los enteros de los decimales con un punto (.): "+"\033[0;m")
+            if magnitudVi.count(".")!=1:
+                print("Los enteros y los decimales deben estar separados por un punto.")
+                validMag=0
