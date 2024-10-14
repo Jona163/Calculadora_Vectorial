@@ -119,3 +119,15 @@ for i in range (int(numvectors)):
     if opInfo=="b":
         print("Usted ha seleccionado la opción \"b.- Vector Cartesiano\"")
         infoVectori.append("b")
+
+        print("A continuación ingresaremos la componente del vector en cada eje.")
+
+        print("Empezaremos con la componente del vector en el eje X.")
+        compFx = 0
+        validFx = 0
+        while validFx == 0:
+            compFx = input("\033[1;32m"+"Ingrese la componente en el eje X, separe los enteros de los decimales con un punto (.): "+"\033[0;m")
+            if not(compFx.startswith("-")):
+                if compFx.count(".") != 1:
+                    print("\033[1;31m"+"**"+"\033[4;30m"+"Los enteros y los decimales deben estar separados por un punto."+"\033[0;m")
+                    validFx = 0
