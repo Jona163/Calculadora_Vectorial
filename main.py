@@ -131,3 +131,11 @@ for i in range (int(numvectors)):
                 if compFx.count(".") != 1:
                     print("\033[1;31m"+"**"+"\033[4;30m"+"Los enteros y los decimales deben estar separados por un punto."+"\033[0;m")
                     validFx = 0
+                if compFx.count(".") == 1:
+                    if (not (compFx.split(".")[0].isdigit())) or (not (compFx.split(".")[1].isdigit())):
+                        print("\033[1;31m"+"**"+"\033[4;30m"+"Los elementos antes y después del punto deben ser números."+"\033[0;m")
+                        validFx = 0
+                    if (compFx.split(".")[0].isdigit()) and (compFx.split(".")[1].isdigit()):
+                        validFx = 1
+            if compFx.startswith("-"):
+                possFx=compFx[1:]
