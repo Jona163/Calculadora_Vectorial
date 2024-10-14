@@ -27,3 +27,6 @@ for i in range (int(numvectors)):
         print("\033[1;31m"+"**"+"\033[4;30m"+"Lo sentimos, únicamente puedes escoger entre la opción \"a\",\"b\" o \"c\"."+"\033[0;m")
         opInfo = input("\033[1;32m"+"La opción de ingreso de datos escogida para el vector es: "+"\033[0;m").lower()
     print(" ")
+ if opInfo=="a":
+        print("Usted ha seleccionado la opción \"a.- Magnitud y Cosenos Directores\"")
+        infoVectori.append("a")
