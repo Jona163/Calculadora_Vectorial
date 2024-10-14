@@ -112,3 +112,10 @@ for i in range (int(numvectors)):
         infoVectori.append(float(alpha))
         infoVectori.append(float(beta))
         infoVectori.append(float(gamma))
+
+        print("\nSe ha registrado la información del vector", i+1,":\nSu magnitud es de: ",infoVectori[2],"\nSus ángulos directores (α,β,γ) son: ",(infoVectori[3],infoVectori[4],infoVectori[5]),"grados.")
+        reguladora = input("Presiona \"ENTER\" para continuar con el programa...")
+
+    if opInfo=="b":
+        print("Usted ha seleccionado la opción \"b.- Vector Cartesiano\"")
+        infoVectori.append("b")
