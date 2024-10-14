@@ -149,3 +149,13 @@ for i in range (int(numvectors)):
                     if (possFx.split(".")[0].isdigit()) and (possFx.split(".")[1].isdigit()):
                         validFx = 1
         infoVectori.append(float(compFx))
+
+        print("Ahora continuaremos con la componente del vector en el eje Y.")
+        compFy = 0
+        validFy = 0
+        while validFy == 0:
+            compFy = input("\033[1;32m"+"Ingrese la componente en el eje Y, separe los enteros de los decimales con un punto (.): "+"\033[0;m")
+            if not(compFy.startswith("-")):
+                if compFy.count(".") != 1:
+                    print("\033[1;31m"+"**"+"\033[4;30m"+"Los enteros y los decimales deben estar separados por un punto."+"\033[0;m")
+                    validFy = 0
