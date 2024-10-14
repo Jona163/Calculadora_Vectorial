@@ -40,3 +40,10 @@ for i in range (int(numvectors)):
             if magnitudVi.count(".")!=1:
                 print("Los enteros y los decimales deben estar separados por un punto.")
                 validMag=0
+            if magnitudVi.count(".")==1:
+                if (not(magnitudVi.split(".")[0].isdigit())) or (not(magnitudVi.split(".")[1].isdigit())):
+                    print("\033[1;31m"+"**"+"\033[4;30m"+"Los elementos antes y después del punto deben ser números."+"\033[0;m")
+                    validMag = 0
+                if (magnitudVi.split(".")[0].isdigit()) and (magnitudVi.split(".")[1].isdigit()):
+                    validMag = 1
+        infoVectori.append(float(magnitudVi))
