@@ -56,3 +56,13 @@ for i in range (int(numvectors)):
         while correctAngles==False:
             validAlpha=0
             while validAlpha==0:
+                alpha = input("\033[1;32m"+"Ingrese el ángulo alpha (ángulo con el eje X) separando los enteros de los decimales con un punto (.): "+"\033[0;m")
+                if alpha.count(".")!=1:
+                    print("\033[1;31m"+"**"+"\033[4;30m"+"Los enteros y los decimales deben estar separados por un punto."+"\033[0;m")
+                    validAlpha=0
+                if alpha.count(".")==1:
+                    if (not(alpha.split(".")[0].isdigit())) or (not(alpha.split(".")[1].isdigit())):
+                        print("\033[1;31m"+"**"+"\033[4;30m"+"Los elementos antes y después del punto deben ser números."+"\033[0;m")
+                        validAlpha = 0
+                    if (alpha.split(".")[0].isdigit()) and (alpha.split(".")[1].isdigit()):
+                        if (float(alpha)<0) or (float(alpha)>180):
