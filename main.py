@@ -94,3 +94,11 @@ for i in range (int(numvectors)):
                     validGamma=0
                 if gamma.count(".")==1:
                     if (not(gamma.split(".")[0].isdigit())) or (not(gamma.split(".")[1].isdigit())):
+                        print("\033[1;31m"+"**"+"\033[4;30m"+"Los elementos antes y después del punto deben ser números."+"\033[0;m")
+                        validGamma = 0
+                    if (gamma.split(".")[0].isdigit()) and (gamma.split(".")[1].isdigit()):
+                        if (float(gamma)<0) or (float(gamma)>180):
+                            print("\033[1;31m"+"**"+"\033[4;30m"+"Lo sentimos, lo que has ingresado no es un ángulo válido, debe estar entre 0 y 180 grados, inténtalo de nuevo."+"\033[0;m")
+                            validGamma=0
+                        if (float(gamma)<=180) and (float(gamma)>=0):
+                            validGamma=1
