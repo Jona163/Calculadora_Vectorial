@@ -179,3 +179,17 @@ for i in range (int(numvectors)):
         infoVectori.append(float(compFy))
 
         print("Finalmente registraremos la componente del vector en el eje Z.")
+        compFz = 0
+        validFz = 0
+        while validFz == 0:
+            compFz = input("\033[1;32m"+"Ingrese la componente en el eje Z, separe los enteros de los decimales con un punto (.): "+"\033[0;m")
+            if not(compFz.startswith("-")):
+                if compFz.count(".") != 1:
+                    print("\033[1;31m"+"**"+"\033[4;30m"+"Los enteros y los decimales deben estar separados por un punto."+"\033[0;m")
+                    validFz = 0
+                if compFz.count(".") == 1:
+                    if (not (compFz.split(".")[0].isdigit())) or (not (compFz.split(".")[1].isdigit())):
+                        print("\033[1;31m"+"**"+"\033[4;30m"+"Los elementos antes y después del punto deben ser números."+"\033[0;m")
+                        validFz = 0
+                    if (compFz.split(".")[0].isdigit()) and (compFz.split(".")[1].isdigit()):
+                        validFz = 1
