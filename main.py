@@ -491,3 +491,22 @@ while optionchose != "5":
             zn=np.array([0,componentesz[i]])
             ax.text(componentesx[i], componentesy[i], componentesz[i], "V" + str(i + 1), zorder=1, color="y")
             ax.plot(xn, yn, zn, marker='>', color='y')
+        #Graficar Vector resultante
+        xr = np.array([0, resultX])
+        yr = np.array([0, resultY])
+        zr = np.array([0, resultZ])
+        ax.plot(xr, yr, zr, marker='>', color='g')
+        #Graficar punto de origen
+        ax.plot(np.array([0, 0]), np.array([0, 0]), np.array([0, 0]), marker='o', color='y')
+        #Graficar la información
+            # Rotulación de ejes y leyendas
+        ax.set_xlabel("$X$", color='darkviolet')
+        ax.set_ylabel("$Y$", color='darkviolet')
+        ax.set_zlabel("$Z$", color='darkviolet')
+        ax.set_title("$Vector  Resultante$", color='g')
+        ax.text2D(0.02, 0.02, "|Fr|: "+ str(round(resultMag,3))+"\nα: "+str(round(resultAlpha, 3))+"\nβ: "+
+            str(round(resultBeta, 3))+"\nγ: "+str(round(resultGamma, 3))+"\nFrx: "+ str(round(resultX, 3))+"\nFry: "+str(round(resultY, 3))+"\nFrz: "+str(round(resultZ, 3)), transform=ax.transAxes)
+         # Configuración inicial de vista
+        ax.view_init(20, 75)
+        #Mostrar la gráfica
+        plt.show()
