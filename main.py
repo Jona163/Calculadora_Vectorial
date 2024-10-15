@@ -342,3 +342,21 @@ for i in range (int(numvectors)):
                     if (possFx.split(".")[0].isdigit()) and (possFx.split(".")[1].isdigit()):
                         validFx = 1
         infoVectori.append(float(puntoFx))
+
+        puntoFy = 0
+        validFy = 0
+        while validFy == 0:
+            puntoFy = input("\033[1;32m"+"Ingrese la coordenada Yi: "+"\033[0;m")
+            if not (puntoFy.startswith("-")):
+                if puntoFy.count(".") != 1:
+                    print("\033[1;31m"+"**"+"\033[4;30m"+"Los enteros y los decimales deben estar separados por un punto."+"\033[0;m")
+                    validFy = 0
+                if puntoFy.count(".") == 1:
+                    if (not (puntoFy.split(".")[0].isdigit())) or (not (puntoFy.split(".")[1].isdigit())):
+                        print("\033[1;31m"+"**"+"\033[4;30m"+"Los elementos antes y después del punto deben ser números."+"\033[0;m")
+                        validFy = 0
+                    if (puntoFy.split(".")[0].isdigit()) and (puntoFy.split(".")[1].isdigit()):
+                        validFy = 1
+            if puntoFy.startswith("-"):
+                possFy = puntoFy[1:]
+                if possFy.count(".") != 1:
