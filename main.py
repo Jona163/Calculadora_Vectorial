@@ -277,3 +277,15 @@ for i in range (int(numvectors)):
             if puntoIy.startswith("-"):
                 possIy = puntoIy[1:]
                 if possIy.count(".") != 1:
+                    print("\033[1;31m"+"**"+"\033[4;30m"+"Los enteros y los decimales deben estar separados por un punto."+"\033[0;m")
+                    validIy = 0
+                if possIy.count(".") == 1:
+                    if (not (possIy.split(".")[0].isdigit())) or (not (possIy.split(".")[1].isdigit())):
+                        print("\033[1;31m"+"**"+"\033[4;30m"+"Los elementos antes y después del punto deben ser números."+"\033[0;m")
+                        validIy = 0
+                    if (possIy.split(".")[0].isdigit()) and (possIy.split(".")[1].isdigit()):
+                        validIy = 1
+        infoVectori.append(float(puntoIy))
+
+        puntoIz = 0
+        validIz = 0
