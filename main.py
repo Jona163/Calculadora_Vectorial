@@ -476,3 +476,18 @@ while optionchose != "5":
             "\nSu componente en el eje x es: ", (round(resultX, 3)), "\nSu componente en el eje y es: ",
             (round(resultY, 3)), "\nSu componente en el eje z es: ", (round(resultZ, 3)),
             "\n¡Acompáñanos a ver la gráfica!")
+
+        # Limpiar la información previa.
+        plt.clf()
+        # Creamos de nuevo un lienzo en blanco.
+        fig = plt.figure("N Vectores y Vector Resultante")
+        # Agregar un tercer eje para la tercera coordenada
+        ax = Axes3D(fig)
+
+        #Graficar n vectores
+        for i in range (len(componentesx)):
+            xn=np.array([0,componentesx[i]])
+            yn=np.array([0,componentesy[i]])
+            zn=np.array([0,componentesz[i]])
+            ax.text(componentesx[i], componentesy[i], componentesz[i], "V" + str(i + 1), zorder=1, color="y")
+            ax.plot(xn, yn, zn, marker='>', color='y')
