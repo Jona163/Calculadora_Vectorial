@@ -451,3 +451,19 @@ while optionchose != "5":
         # Recopilación de la magnitud si el vector fue ingresado con la opción c
         if i[1]=="c":
             magnitudesN.append(i[2])
+    # El vector resultante como vector cartesiano es.
+    resultX = sum(componentesx)
+    resultY = sum(componentesy)
+    resultZ = sum(componentesz)
+    # Hallar la magnitud y cosenos directores.
+    resultMag = ((resultX) ** 2 + (resultY) ** 2 + (resultZ) ** 2) ** 0.5
+    resultAlpha = math.degrees(math.acos(resultX / resultMag))
+    resultBeta = math.degrees(math.acos(resultY / resultMag))
+    resultGamma = math.degrees(math.acos(resultZ / resultMag))
+    # Hallar el ángulo entre el vector n y el vector resultante.
+    for i in range(len(vectoresinfo)):
+        niVect=np.array([componentesx[i],componentesy[i],componentesz[i]])
+        resVect=np.array([resultX,resultY,resultZ])
+        prodDotNyR=np.dot(niVect,resVect)
+        angleNyR= math.degrees(math.acos((prodDotNyR)/(resultMag*magnitudesN[i])))
+        angulosNyR.append(angleNyR)
