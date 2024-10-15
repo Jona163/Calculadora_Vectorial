@@ -235,3 +235,45 @@ for i in range (int(numvectors)):
         print("Ingresaremos las coordenadas del punto inicial (Xi,Yi,Zi).")
         puntoIx=0
         validIx = 0
+       while validIx == 0:
+            puntoIx = input("\033[1;32m"+"Ingrese la coordenada Xi: "+"\033[0;m")
+            if not (puntoIx.startswith("-")):
+                if puntoIx.count(".") != 1:
+                    print("\033[1;31m"+"**"+"\033[4;30m"+"Los enteros y los decimales deben estar separados por un punto."+"\033[0;m")
+                    validIx = 0
+                if puntoIx.count(".") == 1:
+                    if (not (puntoIx.split(".")[0].isdigit())) or (not (puntoIx.split(".")[1].isdigit())):
+                        print("\033[1;31m"+"**"+"\033[4;30m"+"Los elementos antes y después del punto deben ser números."+"\033[0;m")
+                        validIx = 0
+                    if (puntoIx.split(".")[0].isdigit()) and (puntoIx.split(".")[1].isdigit()):
+                        validIx = 1
+            if puntoIx.startswith("-"):
+                possIx = puntoIx[1:]
+                if possIx.count(".") != 1:
+                    print("\033[1;31m"+"**"+"\033[4;30m"+"Los enteros y los decimales deben estar separados por un punto."+"\033[0;m")
+                    validIx = 0
+                if possIx.count(".") == 1:
+                    if (not (possIx.split(".")[0].isdigit())) or (not (possIx.split(".")[1].isdigit())):
+                        print("\033[1;31m"+"**"+"\033[4;30m"+"Los elementos antes y después del punto deben ser números."+"\033[0;m")
+                        validIx = 0
+                    if (possIx.split(".")[0].isdigit()) and (possIx.split(".")[1].isdigit()):
+                        validIx = 1
+        infoVectori.append(float(puntoIx))
+
+        puntoIy = 0
+        validIy = 0
+        while validIy == 0:
+            puntoIy = input("\033[1;32m"+"Ingrese la coordenada Yi: "+"\033[0;m")
+            if not (puntoIy.startswith("-")):
+                if puntoIy.count(".") != 1:
+                    print("\033[1;31m"+"**"+"\033[4;30m"+"Los enteros y los decimales deben estar separados por un punto."+"\033[0;m")
+                    validIy = 0
+                if puntoIy.count(".") == 1:
+                    if (not (puntoIy.split(".")[0].isdigit())) or (not (puntoIy.split(".")[1].isdigit())):
+                        print("\033[1;31m"+"**"+"\033[4;30m"+"Los elementos antes y después del punto deben ser números."+"\033[0;m")
+                        validIy = 0
+                    if (puntoIy.split(".")[0].isdigit()) and (puntoIy.split(".")[1].isdigit()):
+                        validIy = 1
+            if puntoIy.startswith("-"):
+                possIy = puntoIy[1:]
+                if possIy.count(".") != 1:
