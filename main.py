@@ -385,7 +385,6 @@ for i in range (int(numvectors)):
                     if (puntoFz.split(".")[0].isdigit()) and (puntoFz.split(".")[1].isdigit()):
                         validFz = 1
             if puntoFz.startswith("-"):
-
                             possFz = puntoFz[1:]
                 if possFz.count(".") != 1:
                     print("\033[1;31m"+"**"+"\033[4;30m"+"Los enteros y los decimales deben estar separados por un punto."+"\033[0;m")
@@ -397,3 +396,8 @@ for i in range (int(numvectors)):
                     if (possFz.split(".")[0].isdigit()) and (possFz.split(".")[1].isdigit()):
                         validFz = 1
         infoVectori.append(float(puntoFz))
+
+        print("\nSe ha registrado la información del vector", i + 1, ":\nLa magnitud del vector es: ", infoVectori[2],
+              "\nLas coordenadas del punto inicial son: ", (infoVectori[3],infoVectori[4],infoVectori[5]), "\nSu componente en z es: ", (infoVectori[6],infoVectori[7],infoVectori[8]))
+        reguladorc = input("Presiona \"ENTER\" para continuar con el programa...")
+    vectoresinfo.append(infoVectori)
