@@ -209,3 +209,12 @@ for i in range (int(numvectors)):
         print("\nSe ha registrado la información del vector", i + 1, ":\nSu componente en x es: ", infoVectori[2],
               "\nSu componente en y es: ", infoVectori[3],"\nSu componente en z es: ", infoVectori[4])
         reguladorb = input("Presiona \"ENTER\" para continuar con el programa...")
+
+    if opInfo=="c":
+        print("Usted ha seleccionado la opción \"c.- Magnitud y Dirección a partir de dos puntos.\"")
+        infoVectori.append("c")
+
+        print("Ingresaremos la magnitud del vector.")
+        magnitudVi = 0
+        validMag = 0
+        while validMag == 0:
