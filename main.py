@@ -193,3 +193,15 @@ for i in range (int(numvectors)):
                         validFz = 0
                     if (compFz.split(".")[0].isdigit()) and (compFz.split(".")[1].isdigit()):
                         validFz = 1
+            if compFz.startswith("-"):
+                possFz=compFz[1:]
+                if possFz.count(".") != 1:
+                    print("\033[1;31m"+"**"+"\033[4;30m"+"Los enteros y los decimales deben estar separados por un punto."+"\033[0;m")
+                    validFz = 0
+                if possFz.count(".") == 1:
+                    if (not (possFz.split(".")[0].isdigit())) or (not (possFz.split(".")[1].isdigit())):
+                        print("\033[1;31m"+"**"+"\033[4;30m"+"Los elementos antes y después del punto deben ser números."+"\033[0;m")
+                        validFz = 0
+                    if (possFz.split(".")[0].isdigit()) and (possFz.split(".")[1].isdigit()):
+                        validFz = 1
+        infoVectori.append(float(compFz))
