@@ -418,3 +418,16 @@ while optionchose != "5":
     magnitudesN = []
     vectoresNxyz = []
     angulosNyR = []
+
+    #Analizaremos la información de cada vector
+    for i in vectoresinfo:
+        #Recopilación de las componentes si el vector fue ingresado con la opción a
+        if i[1]=="a":
+            componentesx.append(i[2]*(math.cos(math.radians(i[3]))))
+            componentesy.append(i[2]*(math.cos(math.radians(i[4]))))
+            componentesz.append(i[2]*(math.cos(math.radians(i[5]))))
+        # Recopilación de las componentes si el vector fue ingresado con la opción b
+        if i[1]=="b":
+            componentesx.append(i[2])
+            componentesy.append(i[3])
+            componentesz.append(i[4])
