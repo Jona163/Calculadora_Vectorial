@@ -360,3 +360,28 @@ for i in range (int(numvectors)):
             if puntoFy.startswith("-"):
                 possFy = puntoFy[1:]
                 if possFy.count(".") != 1:
+                    print("\033[1;31m"+"**"+"\033[4;30m"+"Los enteros y los decimales deben estar separados por un punto."+"\033[0;m")
+                    validFy = 0
+                if possFy.count(".") == 1:
+                    if (not (possFy.split(".")[0].isdigit())) or (not (possFy.split(".")[1].isdigit())):
+                        print("\033[1;31m"+"**"+"\033[4;30m"+"Los elementos antes y después del punto deben ser números."+"\033[0;m")
+                        validFy = 0
+                    if (possFy.split(".")[0].isdigit()) and (possFy.split(".")[1].isdigit()):
+                        validFy = 1
+        infoVectori.append(float(puntoFy))
+
+        puntoFz = 0
+        validFz = 0
+        while validFz == 0:
+            puntoFz = input("\033[1;32m"+"Ingrese la coordenada Zi: "+"\033[0;m")
+            if not (puntoFz.startswith("-")):
+                if puntoFz.count(".") != 1:
+                    print("\033[1;31m"+"**"+"\033[4;30m"+"Los enteros y los decimales deben estar separados por un punto."+"\033[0;m")
+                    validFz = 0
+                if puntoFz.count(".") == 1:
+                    if (not (puntoFz.split(".")[0].isdigit())) or (not (puntoFz.split(".")[1].isdigit())):
+                        print("\033[1;31m"+"**"+"\033[4;30m"+"Los elementos antes y después del punto deben ser números."+"\033[0;m")
+                        validFz = 0
+                    if (puntoFz.split(".")[0].isdigit()) and (puntoFz.split(".")[1].isdigit()):
+                        validFz = 1
+            if puntoFz.startswith("-"):
