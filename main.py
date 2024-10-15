@@ -229,3 +229,9 @@ for i in range (int(numvectors)):
                 if (magnitudVi.split(".")[0].isdigit()) and (magnitudVi.split(".")[1].isdigit()):
                     validMag = 1
         infoVectori.append(float(magnitudVi))
+
+        print("Vamos a ingresar el punto final y el punto inicial para obtener la dirección.")
+
+        print("Ingresaremos las coordenadas del punto inicial (Xi,Yi,Zi).")
+        puntoIx=0
+        validIx = 0
