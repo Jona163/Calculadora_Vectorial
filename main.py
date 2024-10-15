@@ -289,3 +289,20 @@ for i in range (int(numvectors)):
 
         puntoIz = 0
         validIz = 0
+       while validIz == 0:
+            puntoIz = input("\033[1;32m"+"Ingrese la coordenada Zi: "+"\033[0;m")
+            if not (puntoIz.startswith("-")):
+                if puntoIz.count(".") != 1:
+                    print("\033[1;31m"+"**"+"\033[4;30m"+"Los enteros y los decimales deben estar separados por un punto."+"\033[0;m")
+                    validIz = 0
+                if puntoIz.count(".") == 1:
+                    if (not (puntoIz.split(".")[0].isdigit())) or (not (puntoIz.split(".")[1].isdigit())):
+                        print("\033[1;31m"+"**"+"\033[4;30m"+"Los elementos antes y después del punto deben ser números."+"\033[0;m")
+                        validIz = 0
+                    if (puntoIz.split(".")[0].isdigit()) and (puntoIz.split(".")[1].isdigit()):
+                        validIz = 1
+            if puntoIz.startswith("-"):
+                possIz = puntoIz[1:]
+                if possIz.count(".") != 1:
+                    print("\033[1;31m"+"**"+"\033[4;30m"+"Los enteros y los decimales deben estar separados por un punto."+"\033[0;m")
+                    validIz = 0
