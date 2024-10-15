@@ -467,3 +467,12 @@ while optionchose != "5":
         prodDotNyR=np.dot(niVect,resVect)
         angleNyR= math.degrees(math.acos((prodDotNyR)/(resultMag*magnitudesN[i])))
         angulosNyR.append(angleNyR)
+
+    if optionchose == "1":
+        print("\nHa seleccionado la opción 1. Ver el vector resultante.")
+        print("A continuación te mostraremos la información del vector resultante.\nLa magnitud del vector resultante es: ",
+            round(resultMag, 3), "\nSu ángulo director α es: ", (round(resultAlpha, 3)), "\nSu ángulo director β es: ",
+            (round(resultBeta, 3)), "\nSu ángulo director γ es: ", (round(resultGamma, 3)),
+            "\nSu componente en el eje x es: ", (round(resultX, 3)), "\nSu componente en el eje y es: ",
+            (round(resultY, 3)), "\nSu componente en el eje z es: ", (round(resultZ, 3)),
+            "\n¡Acompáñanos a ver la gráfica!")
