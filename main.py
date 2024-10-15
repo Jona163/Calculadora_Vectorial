@@ -401,3 +401,20 @@ for i in range (int(numvectors)):
               "\nLas coordenadas del punto inicial son: ", (infoVectori[3],infoVectori[4],infoVectori[5]), "\nSu componente en z es: ", (infoVectori[6],infoVectori[7],infoVectori[8]))
         reguladorc = input("Presiona \"ENTER\" para continuar con el programa...")
     vectoresinfo.append(infoVectori)
+
+#Menú y cálculos
+print("\033[1;34m"+"\nGracias por ingresar tus datos, ahora vamos a proceder con las opciones de cálculo."+"\033[0;m")
+menu="\nEscoge una opción del menú.\n1. Ver el vector resultante.\n2. Ver los ángulos entre los vectores ingresados y el vector resultante.\n3. Vector perpendicular al vector fuerza resultante y un vector de los ingresados.\n4. Proyección de un vector ingresado sobre el vector resultante.\n5. Salir."
+optionchose= ""
+while optionchose != "5":
+    #[1,"a",Magnitud,Alpha,Teta,Gamma]
+    #[2,"b",Fx,Fy,Fz]
+    #[3,"c",Magnitud,Xi,Yi,Zi,Xf,Yf,Zf]
+    print(menu)
+    optionchose=input("\033[1;32m"+"Ingrese una opción del menú: "+"\033[0;m")
+    componentesx = []
+    componentesy = []
+    componentesz = []
+    magnitudesN = []
+    vectoresNxyz = []
+    angulosNyR = []
