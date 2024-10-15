@@ -331,3 +331,14 @@ for i in range (int(numvectors)):
                     if (puntoFx.split(".")[0].isdigit()) and (puntoFx.split(".")[1].isdigit()):
                         validFx = 1
             if puntoFx.startswith("-"):
+                possFx = puntoFx[1:]
+                if possFx.count(".") != 1:
+                    print("\033[1;31m"+"**"+"\033[4;30m"+"Los enteros y los decimales deben estar separados por un punto."+"\033[0;m")
+                    validFx = 0
+                if possFx.count(".") == 1:
+                    if (not (possFx.split(".")[0].isdigit())) or (not (possFx.split(".")[1].isdigit())):
+                        print("\033[1;31m"+"**"+"\033[4;30m"+"Los elementos antes y después del punto deben ser números."+"\033[0;m")
+                        validFx = 0
+                    if (possFx.split(".")[0].isdigit()) and (possFx.split(".")[1].isdigit()):
+                        validFx = 1
+        infoVectori.append(float(puntoFx))
