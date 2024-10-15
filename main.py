@@ -431,3 +431,23 @@ while optionchose != "5":
             componentesx.append(i[2])
             componentesy.append(i[3])
             componentesz.append(i[4])
+        # Recopilación de las componentes si el vector fue ingresado con la opción c
+        if i[1]=="c":
+            mgUnitario=((i[6] - i[3])**2+(i[7] - i[4])**2+(i[8] - i[5])**2)**0.5
+            unitarioX = (i[6] - i[3])/mgUnitario
+            unitarioY = (i[7] - i[4])/mgUnitario
+            unitarioZ = (i[8] - i[5])/mgUnitario
+            componentesx.append(i[2]*unitarioX)
+            componentesy.append(i[2]*unitarioY)
+            componentesz.append(i[2]*unitarioZ)
+    # Magnitudes de los n vectores
+    for i in vectoresinfo:
+        #Recopilación de la magnitud si el vector fue ingresado con la opción a
+        if i[1]=="a":
+            magnitudesN.append(i[2])
+        # Recopilación de la magnitud si el vector fue ingresado con la opción b
+        if i[1]=="b":
+            magnitudesN.append(((i[2])**2+(i[3])**2+(i[4])**2)**0.5)
+        # Recopilación de la magnitud si el vector fue ingresado con la opción c
+        if i[1]=="c":
+            magnitudesN.append(i[2])
