@@ -218,3 +218,14 @@ for i in range (int(numvectors)):
         magnitudVi = 0
         validMag = 0
         while validMag == 0:
+            magnitudVi = input("\033[1;32m"+"Ingrese la magnitud del vector separando los enteros de los decimales con un punto (.): "+"\033[0;m")
+            if magnitudVi.count(".") != 1:
+                print("\033[1;31m"+"**"+"\033[4;30m"+"Los enteros y los decimales deben estar separados por un punto."+"\033[0;m")
+                validMag = 0
+            if magnitudVi.count(".") == 1:
+                if (not (magnitudVi.split(".")[0].isdigit())) or (not (magnitudVi.split(".")[1].isdigit())):
+                    print("\033[1;31m"+"**"+"\033[4;30m"+"Los elementos antes y después del punto deben ser números."+"\033[0;m")
+                    validMag = 0
+                if (magnitudVi.split(".")[0].isdigit()) and (magnitudVi.split(".")[1].isdigit()):
+                    validMag = 1
+        infoVectori.append(float(magnitudVi))
