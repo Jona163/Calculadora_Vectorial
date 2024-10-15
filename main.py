@@ -205,3 +205,7 @@ for i in range (int(numvectors)):
                     if (possFz.split(".")[0].isdigit()) and (possFz.split(".")[1].isdigit()):
                         validFz = 1
         infoVectori.append(float(compFz))
+
+        print("\nSe ha registrado la información del vector", i + 1, ":\nSu componente en x es: ", infoVectori[2],
+              "\nSu componente en y es: ", infoVectori[3],"\nSu componente en z es: ", infoVectori[4])
+        reguladorb = input("Presiona \"ENTER\" para continuar con el programa...")
