@@ -637,3 +637,5 @@ while optionchose != "5":
 
     elif optionchose!="1" and optionchose!="2" and optionchose!="3" and optionchose!="4" and optionchose!="5":
         print("\033[1;31m"+"**"+"\033[4;30m"+"No existe esa opción en el menu."+"\033[0;m")
+
+print("\033[1;34m"+"¡Gracias por usar nuestro programa, espero sea de gran ayuda para ustedes!"+"\033[0;m")
