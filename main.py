@@ -554,3 +554,12 @@ while optionchose != "5":
         ax.plot(xp, yp, zp, marker='>', color='b')
         # Graficar punto de origen
         ax.plot(np.array([0, 0]), np.array([0, 0]), np.array([0, 0]), marker='o', color='y')
+        # Graficar la información
+        # Rotulación de ejes y leyendas
+        ax.set_xlabel("$X$", color='darkviolet')
+        ax.set_ylabel("$Y$", color='darkviolet')
+        ax.set_zlabel("$Z$", color='darkviolet')
+        ax.set_title("$Vector  Perpendicular a Vr y Vn$", color='b')
+        ax.text2D(0.02, 0.02, "│Vp┴│: "+ str(round(perpMag, 3))+"\nVp┴x: " + str(round(perpV[0],3)) + "\nVp┴y: "+ str(round(perpV[1],3))+"\nVp┴z: "+ str(round(perpV[2],3)),transform=ax.transAxes)
+        ax.text2D(0.80, 0.02, "│Fr│: " + str(round(resultMag, 3)), transform=ax.transAxes, color="g")
+        ax.text2D(0.80, 0.06, "│V" + str(eleccion3) + "│: " + str(round(magnitudesN[indice1], 3)),transform=ax.transAxes, color="y")
