@@ -515,3 +515,12 @@ while optionchose != "5":
         for i in range (len(vectoresinfo)):
             print("El ángulo entre el vector resultante y el vector ",(i+1),"es: ",round(angulosNyR[i],3),"grados.")
         regulador2=input("Presiona \"ENTER\" para continuar con otra opción del menú...")
+
+    elif optionchose == "3":
+        print("\nHa seleccionado la opción 3. Vector perpendicular al vector fuerza resultante y un vector de los ingresados.")
+        print("Para esta opción debe seleccionar uno de los ", numvectors, "vectores ingresados.")
+        eleccion3 = input("\033[1;32m" + "Ingrese el vector elegido: " + "\033[0;m")
+        while (not(eleccion3.isdigit())) or (int(eleccion3) > int(numvectors)) or (int(eleccion3) <= 0):
+            print("\033[1;31m" + "**" + "\033[4;30m" + "Lo ingresado no está entre las opciones posibles, recuerda que debes ingresar el número del vector con el que deseas trabajar." + "\033[0;m")
+            eleccion3 = input("\033[1;32m" + "Ingrese el vector elegido: " + "\033[0;m")
+        indice1 = int(eleccion3) - 1
