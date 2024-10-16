@@ -586,3 +586,9 @@ while optionchose != "5":
         proyecx = compo_unitariorx * componentesx[indice2]
         proyecy = compo_unitariory * componentesy[indice2]
         proyecz = compo_unitariorz * componentesz[indice2]
+        magnitudproyec = round(proyecx + proyecy + proyecz, 3)
+        vtorproyecx = round(magnitudproyec * compo_unitariorx, 3)
+        vtorproyecy = round(magnitudproyec * compo_unitariory, 3)
+        vtorproyecz = round(magnitudproyec * compo_unitariorz, 3)
+        proyec_vector = (vtorproyecx, vtorproyecy, vtorproyecz)
+        print("La proyección del vector", eleccion4, "cuyas componentes son: ",
