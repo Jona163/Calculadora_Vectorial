@@ -614,3 +614,10 @@ while optionchose != "5":
         yr = np.array([0, resultY])
         zr = np.array([0, resultZ])
         ax.plot(xr, yr, zr, marker='>', color='g')
+        # Graficar el Vector Proyectado
+        xp = np.array([0, vtorproyecx])
+        yp = np.array([0, vtorproyecy])
+        zp = np.array([0, vtorproyecz])
+        ax.plot(xp, yp, zp, marker='>', color='b')
+        # Graficar punto de origen
+        ax.plot(np.array([0, 0]), np.array([0, 0]), np.array([0, 0]), marker='o', color='y')
