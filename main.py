@@ -510,3 +510,8 @@ while optionchose != "5":
         ax.view_init(20, 75)
         #Mostrar la gráfica
         plt.show()
+  elif optionchose == "2":
+        print("\nHa seleccionado la opción 2. Ver los ángulos entre los vectores ingresados y el vector resultante.")
+        for i in range (len(vectoresinfo)):
+            print("El ángulo entre el vector resultante y el vector ",(i+1),"es: ",round(angulosNyR[i],3),"grados.")
+        regulador2=input("Presiona \"ENTER\" para continuar con otra opción del menú...")
