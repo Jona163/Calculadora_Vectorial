@@ -568,3 +568,13 @@ while optionchose != "5":
         ax.view_init(20, 75)
         # Mostrar la gráfica
         plt.show()
+
+    elif optionchose == "4":
+        print("Ha seleccionado la opción 4. Proyección de un vector ingresado sobre el vector resultante.")
+        print("Para esta opción debe seleccionar uno de los ", numvectors, "vectores ingresados.")
+        eleccion4 = input("\033[1;32m" + "Ingrese el vector elegido: " + "\033[0;m")
+        while (not (eleccion4.isdigit())) or (int(eleccion4) > int(numvectors)) or (int(eleccion4) <= 0):
+            print(
+                "\033[1;31m" + "**" + "\033[4;30m" + "Lo ingresado no está entre las opciones posibles, recuerda que debes ingresar el número del vector con el que deseas trabajar." + "\033[0;m")
+            eleccion4 = input("\033[1;32m" + "Ingrese el vector elegido: " + "\033[0;m")
+        indice2 = int(eleccion4) - 1
