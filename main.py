@@ -621,3 +621,12 @@ while optionchose != "5":
         ax.plot(xp, yp, zp, marker='>', color='b')
         # Graficar punto de origen
         ax.plot(np.array([0, 0]), np.array([0, 0]), np.array([0, 0]), marker='o', color='y')
+        # Graficar la información
+        # Rotulación de ejes y leyendas
+        ax.set_xlabel("$X$", color='darkviolet')
+        ax.set_ylabel("$Y$", color='darkviolet')
+        ax.set_zlabel("$Z$", color='darkviolet')
+        ax.set_title("$Vector Proyección Fn sobre Fr$", color='b')
+        ax.text2D(0.02, 0.02,"│Vproy│: " + str(magnitudproyec) + "\nVproy-x: " + str(vtorproyecx) + "\nVproy-y: " + str(vtorproyecy) + "\nVproy-z: " + str(vtorproyecz), transform=ax.transAxes)
+        ax.text2D(0.80, 0.02, "│Fr│: " + str(round(resultMag, 3)), transform=ax.transAxes, color="g")
+        ax.text2D(0.80, 0.06, "│V"+str(eleccion4)+"│: " + str(round(magnitudesN[indice2], 3)), transform=ax.transAxes, color="y")
