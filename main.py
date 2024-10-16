@@ -524,3 +524,9 @@ while optionchose != "5":
             print("\033[1;31m" + "**" + "\033[4;30m" + "Lo ingresado no está entre las opciones posibles, recuerda que debes ingresar el número del vector con el que deseas trabajar." + "\033[0;m")
             eleccion3 = input("\033[1;32m" + "Ingrese el vector elegido: " + "\033[0;m")
         indice1 = int(eleccion3) - 1
+        vtor_eleccion = np.array([componentesx[indice1], componentesy[indice1], componentesz[indice1]])
+        vtor_resultante = np.array([resultX, resultY, resultZ])
+        perpV = np.cross(vtor_resultante, vtor_eleccion)
+        perpMag= (np.dot(perpV,perpV))**0.5
+        print("La magnitud de un vector perpendicular al vector resultante y al vector seleccionado es: ", round(perpMag,3))
+        print("Las componentes (x,y,z) de un vector perpendicular al vector resultante y al vector seleccionado son: ", (round(perpV[0],3),round(perpV[1],3),round(perpV[2],3)))
