@@ -578,3 +578,11 @@ while optionchose != "5":
                 "\033[1;31m" + "**" + "\033[4;30m" + "Lo ingresado no está entre las opciones posibles, recuerda que debes ingresar el número del vector con el que deseas trabajar." + "\033[0;m")
             eleccion4 = input("\033[1;32m" + "Ingrese el vector elegido: " + "\033[0;m")
         indice2 = int(eleccion4) - 1
+        # Conseguir el vector unitario de la resultante
+        compo_unitariorx = resultX / resultMag
+        compo_unitariory = resultY / resultMag
+        compo_unitariorz = resultZ / resultMag
+        # Proyeción del n vector sobre el vector unitario.
+        proyecx = compo_unitariorx * componentesx[indice2]
+        proyecy = compo_unitariory * componentesy[indice2]
+        proyecz = compo_unitariorz * componentesz[indice2]
