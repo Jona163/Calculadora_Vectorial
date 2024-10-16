@@ -563,3 +563,8 @@ while optionchose != "5":
         ax.text2D(0.02, 0.02, "│Vp┴│: "+ str(round(perpMag, 3))+"\nVp┴x: " + str(round(perpV[0],3)) + "\nVp┴y: "+ str(round(perpV[1],3))+"\nVp┴z: "+ str(round(perpV[2],3)),transform=ax.transAxes)
         ax.text2D(0.80, 0.02, "│Fr│: " + str(round(resultMag, 3)), transform=ax.transAxes, color="g")
         ax.text2D(0.80, 0.06, "│V" + str(eleccion3) + "│: " + str(round(magnitudesN[indice1], 3)),transform=ax.transAxes, color="y")
+
+        # Configuración inicial de vista
+        ax.view_init(20, 75)
+        # Mostrar la gráfica
+        plt.show()
