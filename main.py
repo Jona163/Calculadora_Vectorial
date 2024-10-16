@@ -630,3 +630,10 @@ while optionchose != "5":
         ax.text2D(0.02, 0.02,"│Vproy│: " + str(magnitudproyec) + "\nVproy-x: " + str(vtorproyecx) + "\nVproy-y: " + str(vtorproyecy) + "\nVproy-z: " + str(vtorproyecz), transform=ax.transAxes)
         ax.text2D(0.80, 0.02, "│Fr│: " + str(round(resultMag, 3)), transform=ax.transAxes, color="g")
         ax.text2D(0.80, 0.06, "│V"+str(eleccion4)+"│: " + str(round(magnitudesN[indice2], 3)), transform=ax.transAxes, color="y")
+        # Configuración inicial de vista
+        ax.view_init(20, 75)
+        # Mostrar la gráfica
+        plt.show()
+
+    elif optionchose!="1" and optionchose!="2" and optionchose!="3" and optionchose!="4" and optionchose!="5":
+        print("\033[1;31m"+"**"+"\033[4;30m"+"No existe esa opción en el menu."+"\033[0;m")
