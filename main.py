@@ -597,3 +597,15 @@ while optionchose != "5":
         print("La magnitud de la proyección del vector",
               (componentesx[indice2], componentesy[indice2], componentesz[indice2]), "sobre el vector resultante es",
               magnitudproyec)
+
+        # Limpiar la información previa.
+        plt.clf()
+        # Creamos de nuevo un lienzo en blanco.
+        fig = plt.figure("Proyección del vector seleccionado sobre el vector resultante")
+        # Agregar un tercer eje para la tercera coordenada
+        ax = Axes3D(fig)
+        # Graficar el vector n seleccionado.
+        xn = np.array([0, componentesx[indice2]])
+        yn = np.array([0, componentesy[indice2]])
+        zn = np.array([0, componentesz[indice2]])
+        ax.plot(xn, yn, zn, marker='>', color='y')
