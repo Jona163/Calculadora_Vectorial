@@ -530,3 +530,15 @@ while optionchose != "5":
         perpMag= (np.dot(perpV,perpV))**0.5
         print("La magnitud de un vector perpendicular al vector resultante y al vector seleccionado es: ", round(perpMag,3))
         print("Las componentes (x,y,z) de un vector perpendicular al vector resultante y al vector seleccionado son: ", (round(perpV[0],3),round(perpV[1],3),round(perpV[2],3)))
+
+        # Limpiar la información previa.
+        plt.clf()
+        # Creamos de nuevo un lienzo en blanco.
+        fig = plt.figure("Vector perpendicular al vector resultante y al vector seleccionado")
+        # Agregar un tercer eje para la tercera coordenada
+        ax = Axes3D(fig)
+        # Graficar el vector n seleccionado.
+        xn = np.array([0, componentesx[indice1]])
+        yn = np.array([0, componentesy[indice1]])
+        zn = np.array([0, componentesz[indice1]])
+        ax.plot(xn, yn, zn, marker='>', color='y')
