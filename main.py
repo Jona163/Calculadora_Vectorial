@@ -542,3 +542,15 @@ while optionchose != "5":
         yn = np.array([0, componentesy[indice1]])
         zn = np.array([0, componentesz[indice1]])
         ax.plot(xn, yn, zn, marker='>', color='y')
+        # Graficar Vector resultante
+        xr = np.array([0, resultX])
+        yr = np.array([0, resultY])
+        zr = np.array([0, resultZ])
+        ax.plot(xr, yr, zr, marker='>', color='g')
+        # Graficar el Vector Perpendicular
+        xp = np.array([0, perpV[0]])
+        yp = np.array([0, perpV[1]])
+        zp = np.array([0, perpV[2]])
+        ax.plot(xp, yp, zp, marker='>', color='b')
+        # Graficar punto de origen
+        ax.plot(np.array([0, 0]), np.array([0, 0]), np.array([0, 0]), marker='o', color='y')
