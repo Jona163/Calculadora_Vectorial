@@ -592,3 +592,8 @@ while optionchose != "5":
         vtorproyecz = round(magnitudproyec * compo_unitariorz, 3)
         proyec_vector = (vtorproyecx, vtorproyecy, vtorproyecz)
         print("La proyección del vector", eleccion4, "cuyas componentes son: ",
+              (round(componentesx[indice2], 3), round(componentesy[indice2], 3), round(componentesz[indice2], 3)),
+              " sobre el vector resultante en coordenadas cartesianas es", proyec_vector)
+        print("La magnitud de la proyección del vector",
+              (componentesx[indice2], componentesy[indice2], componentesz[indice2]), "sobre el vector resultante es",
+              magnitudproyec)
