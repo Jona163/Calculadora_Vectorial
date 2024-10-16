@@ -609,3 +609,8 @@ while optionchose != "5":
         yn = np.array([0, componentesy[indice2]])
         zn = np.array([0, componentesz[indice2]])
         ax.plot(xn, yn, zn, marker='>', color='y')
+        # Graficar Vector resultante
+        xr = np.array([0, resultX])
+        yr = np.array([0, resultY])
+        zr = np.array([0, resultZ])
+        ax.plot(xr, yr, zr, marker='>', color='g')
